@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; };
+		755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 755931751A6093DF000C5F8A /* MKDataScanner.m */; };
+		7559317C1A6093DF000C5F8A /* libMKDataScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 755931701A6093DF000C5F8A /* libMKDataScanner.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7559317D1A6093DF000C5F8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755931681A6093DF000C5F8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7559316F1A6093DF000C5F8A;
+			remoteInfo = MKDataScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7559316E1A6093DF000C5F8A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		755931701A6093DF000C5F8A /* libMKDataScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKDataScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		755931731A6093DF000C5F8A /* MKDataScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKDataScanner.h; sourceTree = "<group>"; };
+		755931751A6093DF000C5F8A /* MKDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDataScanner.m; sourceTree = "<group>"; };
+		7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDataScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		755931811A6093DF000C5F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7559316D1A6093DF000C5F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755931781A6093DF000C5F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7559317C1A6093DF000C5F8A /* libMKDataScanner.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		755931671A6093DF000C5F8A = {
+			isa = PBXGroup;
+			children = (
+				755931721A6093DF000C5F8A /* MKDataScanner */,
+				7559317F1A6093DF000C5F8A /* MKDataScannerTests */,
+				755931711A6093DF000C5F8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		755931711A6093DF000C5F8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				755931701A6093DF000C5F8A /* libMKDataScanner.a */,
+				7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		755931721A6093DF000C5F8A /* MKDataScanner */ = {
+			isa = PBXGroup;
+			children = (
+				755931731A6093DF000C5F8A /* MKDataScanner.h */,
+				755931751A6093DF000C5F8A /* MKDataScanner.m */,
+			);
+			path = MKDataScanner;
+			sourceTree = "<group>";
+		};
+		7559317F1A6093DF000C5F8A /* MKDataScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				755931801A6093DF000C5F8A /* Supporting Files */,
+			);
+			path = MKDataScannerTests;
+			sourceTree = "<group>";
+		};
+		755931801A6093DF000C5F8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				755931811A6093DF000C5F8A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7559316F1A6093DF000C5F8A /* MKDataScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner" */;
+			buildPhases = (
+				7559316C1A6093DF000C5F8A /* Sources */,
+				7559316D1A6093DF000C5F8A /* Frameworks */,
+				7559316E1A6093DF000C5F8A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKDataScanner;
+			productName = MKDataScanner;
+			productReference = 755931701A6093DF000C5F8A /* libMKDataScanner.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7559317A1A6093DF000C5F8A /* MKDataScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScannerTests" */;
+			buildPhases = (
+				755931771A6093DF000C5F8A /* Sources */,
+				755931781A6093DF000C5F8A /* Frameworks */,
+				755931791A6093DF000C5F8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7559317E1A6093DF000C5F8A /* PBXTargetDependency */,
+			);
+			name = MKDataScannerTests;
+			productName = MKDataScannerTests;
+			productReference = 7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		755931681A6093DF000C5F8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Marcin Krzyżanowski";
+				TargetAttributes = {
+					7559316F1A6093DF000C5F8A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7559317A1A6093DF000C5F8A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 7559316B1A6093DF000C5F8A /* Build configuration list for PBXProject "MKDataScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 755931671A6093DF000C5F8A;
+			productRefGroup = 755931711A6093DF000C5F8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7559316F1A6093DF000C5F8A /* MKDataScanner */,
+				7559317A1A6093DF000C5F8A /* MKDataScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		755931791A6093DF000C5F8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7559316C1A6093DF000C5F8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755931771A6093DF000C5F8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7559317E1A6093DF000C5F8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7559316F1A6093DF000C5F8A /* MKDataScanner */;
+			targetProxy = 7559317D1A6093DF000C5F8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		755931821A6093DF000C5F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		755931831A6093DF000C5F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		755931851A6093DF000C5F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		755931861A6093DF000C5F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		755931881A6093DF000C5F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		755931891A6093DF000C5F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7559316B1A6093DF000C5F8A /* Build configuration list for PBXProject "MKDataScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755931821A6093DF000C5F8A /* Debug */,
+				755931831A6093DF000C5F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755931851A6093DF000C5F8A /* Debug */,
+				755931861A6093DF000C5F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				755931881A6093DF000C5F8A /* Debug */,
+				755931891A6093DF000C5F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 755931681A6093DF000C5F8A /* Project object */;
+}
