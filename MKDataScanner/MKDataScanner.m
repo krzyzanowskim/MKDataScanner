@@ -62,6 +62,7 @@
         NSRange range = [searchBlock rangeOfData:stopData options:0 range:(NSRange){0,searchBlock.length}];
         if (range.location != NSNotFound) {
             if (dataValue) {
+                [self setScanLocation:[self scanLocation] - stopData.length]; //this will cause reopen stream which is not the best because of performance impact (check performance impact)
                 *dataValue = [scannedData subdataWithRange:(NSRange){0,scannedData.length - stopData.length}];
             }
             return YES;
@@ -71,6 +72,17 @@
     
     return NO;
 }
+
+- (BOOL)scanData:(NSData *)stopData intoData:(NSData **)dataValue
+{
+    NSData *currentBlock = nil;
+    
+    while (![self.provider isAtEnd] && (currentBlock = [self.provider dataForRange:(NSRange){self.scanLocation,stopData.length}])) {
+    }
+    
+    return NO;
+}
+
 
 + (instancetype) scannerWithFileURL:(NSURL *)fileURL
 {

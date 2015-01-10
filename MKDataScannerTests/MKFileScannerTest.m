@@ -59,7 +59,7 @@
     XCTAssert([[NSData dataWithBytes:expectedBytes1 length:sizeof(expectedBytes1)] isEqualToData:scanned], @"Invalid scanned value");
 
     uint8_t bytes2[] = {0x04};
-    uint8_t expectedBytes2[] = {0x02, 0x03};
+    uint8_t expectedBytes2[] = {0x01, 0x02, 0x03};
     XCTAssertTrue([dataScanner scanUpToData:[NSData dataWithBytes:bytes2 length:sizeof(bytes2)] intoData:&scanned]);
     XCTAssert([[NSData dataWithBytes:expectedBytes2 length:sizeof(expectedBytes2)] isEqualToData:scanned], @"Invalid scanned value");
     NSLog(@"scanned %@",scanned);
