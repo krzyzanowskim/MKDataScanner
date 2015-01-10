@@ -61,8 +61,10 @@
         // scan prev+current block
         NSRange range = [searchBlock rangeOfData:stopData options:0 range:(NSRange){0,searchBlock.length}];
         if (range.location != NSNotFound) {
+            [self setScanLocation:[self scanLocation] - stopData.length];
             if (dataValue) {
-                [self setScanLocation:[self scanLocation] - stopData.length]; //this will cause reopen stream which is not the best because of performance impact (check performance impact)
+                // this will cause reopen stream which is not the best because of performance impact (check performance impact)
+                // check is better is read byte by byte, by blocks with resets
                 *dataValue = [scannedData subdataWithRange:(NSRange){0,scannedData.length - stopData.length}];
             }
             return YES;
@@ -73,11 +75,16 @@
     return NO;
 }
 
-- (BOOL)scanData:(NSData *)stopData intoData:(NSData **)dataValue
+- (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue
 {
-    NSData *currentBlock = nil;
-    
-    while (![self.provider isAtEnd] && (currentBlock = [self.provider dataForRange:(NSRange){self.scanLocation,stopData.length}])) {
+    NSData *scannedBlock = nil;
+    if (![self.provider isAtEnd] && (scannedBlock = [self.provider dataForRange:(NSRange){self.scanLocation,data.length}])) {
+        if ([scannedBlock isEqualToData:data]) {
+            if (dataValue) {
+                *dataValue = scannedBlock;
+            }
+            return YES;
+        }
     }
     
     return NO;

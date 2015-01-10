@@ -71,10 +71,8 @@
     
     uint8_t bytes1[] = {0x05};
     XCTAssertTrue([dataScanner scanUpToData:[NSData dataWithBytes:bytes1 length:sizeof(bytes1)] intoData:nil]);
-    //NSLog(@"scanLocation %@",@(dataScanner.scanLocation));
     uint8_t bytes2[] = {0x06};
     XCTAssertTrue([dataScanner scanUpToData:[NSData dataWithBytes:bytes2 length:sizeof(bytes2)] intoData:nil]);
-    //NSLog(@"scanLocation %@",@(dataScanner.scanLocation));
 }
 
 - (void) testScanUpTo4
@@ -102,6 +100,17 @@
     
     uint8_t bytes[] = {0x08, 0x09};
     XCTAssertFalse([dataScanner scanUpToData:[NSData dataWithBytes:bytes length:sizeof(bytes)] intoData:nil]);
+}
+
+- (void) testScanData1
+{
+    MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];
+    
+    NSData *scanned = nil;
+    uint8_t bytes[] = {0x00, 0x01};
+    XCTAssertTrue([dataScanner scanData:[NSData dataWithBytes:bytes length:sizeof(bytes)] intoData:&scanned]);
+    [dataScanner setScanLocation:1];
+    XCTAssertFalse([dataScanner scanData:[NSData dataWithBytes:bytes length:sizeof(bytes)] intoData:&scanned]);
 }
 
 @end
