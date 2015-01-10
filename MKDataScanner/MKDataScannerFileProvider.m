@@ -65,7 +65,7 @@
 
 - (void)setOffset:(NSInteger)offset
 {
-    NSParameterAssert(offset > 0);
+    NSParameterAssert(offset >= 0);
 
     if (offset == [self offset]) {
         return;

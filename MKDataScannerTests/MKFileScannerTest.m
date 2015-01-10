@@ -62,7 +62,6 @@
     uint8_t expectedBytes2[] = {0x01, 0x02, 0x03};
     XCTAssertTrue([dataScanner scanUpToData:[NSData dataWithBytes:bytes2 length:sizeof(bytes2)] intoData:&scanned]);
     XCTAssert([[NSData dataWithBytes:expectedBytes2 length:sizeof(expectedBytes2)] isEqualToData:scanned], @"Invalid scanned value");
-    NSLog(@"scanned %@",scanned);
 }
 
 - (void) testScanUpTo3
@@ -108,9 +107,21 @@
     
     NSData *scanned = nil;
     uint8_t bytes[] = {0x00, 0x01};
+    NSUInteger beforeLocation = dataScanner.scanLocation;
     XCTAssertTrue([dataScanner scanData:[NSData dataWithBytes:bytes length:sizeof(bytes)] intoData:&scanned]);
+    XCTAssertEqual(dataScanner.scanLocation, beforeLocation + sizeof(bytes));
+
     [dataScanner setScanLocation:1];
     XCTAssertFalse([dataScanner scanData:[NSData dataWithBytes:bytes length:sizeof(bytes)] intoData:&scanned]);
+}
+
+- (void) testScanInteger
+{
+    MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];
+    [dataScanner setScanLocation:0];
+    NSInteger scannedInteger;
+    XCTAssertTrue([dataScanner scanInteger:&scannedInteger]);
+    XCTAssertEqual(scannedInteger, 506097522914230528);
 }
 
 @end

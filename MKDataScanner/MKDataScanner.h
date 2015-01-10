@@ -15,4 +15,5 @@
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
 - (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 - (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue;
+- (BOOL)scanInteger:(NSInteger *)value;
 @end

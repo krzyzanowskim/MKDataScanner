@@ -90,6 +90,25 @@
     return NO;
 }
 
+- (BOOL)scanInteger:(NSInteger *)value
+{
+    NSData *scannedBlock = nil;
+    if (![self.provider isAtEnd] && (scannedBlock = [self.provider dataForRange:(NSRange){self.scanLocation,sizeof(NSInteger)}])) {
+        if (scannedBlock.length != sizeof(NSInteger)) {
+            if (value) {
+                *value = scannedBlock.length > sizeof(NSInteger) ? INT_MAX : INT_MIN;
+            }
+            return NO;
+        }
+        NSInteger scannedValue;
+        [scannedBlock getBytes:&scannedValue length:scannedBlock.length];
+        if (value) {
+            *value = scannedValue;
+        }
+        return YES;
+    }
+    return NO;
+}
 
 + (instancetype) scannerWithFileURL:(NSURL *)fileURL
 {
