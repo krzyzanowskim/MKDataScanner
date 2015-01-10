@@ -9,6 +9,7 @@
 #import "MKDataScanner.h"
 #import "MKDataProvider.h"
 #import "MKDataScannerFileProvider.h"
+#import "MKDataScannerDataProvider.h"
 
 @interface MKDataScanner ()
 @property (strong) id <MKDataProvider> provider;
@@ -19,8 +20,25 @@
 - (instancetype) initWithFileURL:(NSURL *)fileURL
 {
     NSParameterAssert(fileURL.fileURL);
+    if (!fileURL) {
+        return nil;
+    }
+    
     if (self = [self init]) {
         _provider = [[MKDataScannerFileProvider alloc] initWithFileURL:fileURL];
+    }
+    return self;
+}
+
+- (instancetype) initWithData:(NSData *)data
+{
+    NSParameterAssert(data);
+    if (!data) {
+        return nil;
+    }
+    
+    if (self = [self init]) {
+        _provider = [[MKDataScannerDataProvider alloc] initWithData:data];
     }
     return self;
 }

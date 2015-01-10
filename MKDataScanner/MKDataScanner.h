@@ -13,6 +13,7 @@
 @property (getter=isAtEnd, readonly) BOOL atEnd;
 
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
+- (instancetype) initWithData:(NSData *)data;
 - (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 - (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue;
 - (BOOL)scanInteger:(NSInteger *)value;
