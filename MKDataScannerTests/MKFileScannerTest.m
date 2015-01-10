@@ -40,6 +40,13 @@
     [[NSFileManager defaultManager] removeItemAtPath:[self tmpFilePath] error:nil];
 }
 
+- (void) testScanUpToBytes
+{
+    MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];
+    UInt8 bytes[] = {0x03, 0x04, 0x05, 0x06};
+    [dataScanner scanUpToBytes:&bytes length:sizeof(bytes) intoData:nil];
+}
+
 - (void) testScanUpTo1
 {
     MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];

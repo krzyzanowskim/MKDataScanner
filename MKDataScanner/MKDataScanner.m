@@ -58,7 +58,13 @@
     return [self.provider isAtEnd];
 }
 
-- (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue
+- (BOOL)scanUpToBytes:(const void *)bytes length:(int)length intoData:(NSData * __autoreleasing *)dataValue
+{
+    NSData *data = [NSData dataWithBytes:bytes length:length];
+    return [self scanUpToData:data intoData:dataValue];
+}
+
+- (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData * __autoreleasing *)dataValue
 {
     NSParameterAssert(stopData);
 
@@ -131,6 +137,11 @@
 + (instancetype) scannerWithFileURL:(NSURL *)fileURL
 {
     return [[MKDataScanner alloc] initWithFileURL:fileURL];
+}
+
++ (instancetype) scannerWithData:(NSData *)data
+{
+    return [[MKDataScanner alloc] initWithData:data];
 }
 
 @end

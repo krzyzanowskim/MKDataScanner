@@ -14,6 +14,10 @@
 
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
 - (instancetype) initWithData:(NSData *)data;
++ (instancetype) scannerWithFileURL:(NSURL *)fileURL;
++ (instancetype) scannerWithData:(NSData *)data;
+
+- (BOOL)scanUpToBytes:(const void *)bytes length:(int)length intoData:(NSData * __autoreleasing *)dataValue;
 - (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 - (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue;
 - (BOOL)scanInteger:(NSInteger *)value;
