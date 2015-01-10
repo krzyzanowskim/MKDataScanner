@@ -12,6 +12,7 @@
 @property (copy) NSURL *fileURL;
 @property (assign) NSInteger fileSize;
 @property (strong) dispatch_io_t dispatchIO;
+@property (strong) dispatch_queue_t queue;
 @property (assign) NSInteger localOffset;
 @end
 
@@ -27,7 +28,8 @@
         [self.fileURL getResourceValue:&theSize forKey:NSURLFileSizeKey error:nil];
         _fileSize = [theSize integerValue];
 
-        _dispatchIO = dispatch_io_create_with_path (DISPATCH_IO_RANDOM, [fileURL.path UTF8String], 0, O_RDONLY, dispatch_get_main_queue(), nil);
+        _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        _dispatchIO = dispatch_io_create_with_path (DISPATCH_IO_RANDOM, [fileURL.path UTF8String], 0, O_RDONLY, _queue, nil);
     }
     return self;
 }
@@ -43,8 +45,7 @@
 {
     __block NSMutableData *totalData = [NSMutableData data];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_io_read(self.dispatchIO, range.location, range.length, queue, ^(bool done, dispatch_data_t data, int error) {
+    dispatch_io_read(self.dispatchIO, range.location, range.length, self.queue, ^(bool done, dispatch_data_t data, int error) {
         if (done) {
             [totalData appendData:(NSData *)data];
             self.localOffset = self.localOffset + dispatch_data_get_size(data);
