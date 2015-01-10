@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, MKDataFileHandlerType) {
+    MKDataFileDefaultProvider = 0,
+    MKDataFileDispatchIOProvider,
+    MKDataFileStreamProvider
+};
+
 @interface MKDataScanner : NSObject
 @property NSUInteger scanLocation;
 @property (getter=isAtEnd, readonly) BOOL atEnd;
 
+- (instancetype) initWithFileURL:(NSURL *)fileURL provider:(MKDataFileHandlerType)providerType;
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
 - (instancetype) initWithData:(NSData *)data;
 + (instancetype) scannerWithFileURL:(NSURL *)fileURL;

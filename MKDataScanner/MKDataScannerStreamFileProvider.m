@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Marcin Krzyżanowski. All rights reserved.
 //
 
-#import "MKDataScannerFileProvider.h"
+#import "MKDataScannerStreamFileProvider.h"
 
-@interface MKDataScannerFileProvider ()
+@interface MKDataScannerStreamFileProvider ()
 @property (copy) NSURL *fileURL;
 @property (strong) NSInputStream *inputStream;
 @property (assign) BOOL endReached;
 @end
 
-@implementation MKDataScannerFileProvider
+@implementation MKDataScannerStreamFileProvider
 
 - (instancetype) initWithFileURL:(NSURL *)fileURL
 {

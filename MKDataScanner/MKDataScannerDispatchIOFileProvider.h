@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MKDataProvider.h"
 
-@interface MKDataScannerFileProvider : NSObject <MKDataProvider>
+@interface MKDataScannerDispatchIOFileProvider : NSObject <MKDataProvider>
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
 
 @end

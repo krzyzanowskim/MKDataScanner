@@ -8,7 +8,8 @@
 
 #import "MKDataScanner.h"
 #import "MKDataProvider.h"
-#import "MKDataScannerFileProvider.h"
+#import "MKDataScannerStreamFileProvider.h"
+#import "MKDataScannerDispatchIOFileProvider.h"
 #import "MKDataScannerDataProvider.h"
 
 @interface MKDataScanner ()
@@ -17,7 +18,7 @@
 
 @implementation MKDataScanner
 
-- (instancetype) initWithFileURL:(NSURL *)fileURL
+- (instancetype) initWithFileURL:(NSURL *)fileURL provider:(MKDataFileHandlerType)providerType;
 {
     NSParameterAssert(fileURL.fileURL);
     if (!fileURL) {
@@ -25,7 +26,25 @@
     }
     
     if (self = [self init]) {
-        _provider = [[MKDataScannerFileProvider alloc] initWithFileURL:fileURL];
+        switch (providerType) {
+            case MKDataFileDispatchIOProvider:
+                _provider = [[MKDataScannerDispatchIOFileProvider alloc] initWithFileURL:fileURL];
+                break;
+            case MKDataFileStreamProvider:
+                _provider = [[MKDataScannerStreamFileProvider alloc] initWithFileURL:fileURL];
+                break;
+            default:
+                _provider = [[MKDataScannerDispatchIOFileProvider alloc] initWithFileURL:fileURL];
+                break;
+        }
+    }
+    return self;
+}
+
+- (instancetype) initWithFileURL:(NSURL *)fileURL
+{
+    if (self = [self initWithFileURL:fileURL provider:MKDataFileDefaultProvider]) {
+        
     }
     return self;
 }

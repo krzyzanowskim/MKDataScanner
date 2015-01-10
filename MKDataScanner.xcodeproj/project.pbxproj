@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		753052B71A60BF30003A2746 /* MKDataScannerDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */; };
+		753220071A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753220061A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m */; };
 		755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; };
 		755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 755931751A6093DF000C5F8A /* MKDataScanner.m */; };
 		7559317C1A6093DF000C5F8A /* libMKDataScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 755931701A6093DF000C5F8A /* libMKDataScanner.a */; };
-		7559318C1A6094E7000C5F8A /* MKDataScannerFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */; };
+		7559318C1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */; };
 		7559318F1A609D1D000C5F8A /* MKFileScannerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */; };
 /* End PBXBuildFile section */
 
@@ -41,13 +42,15 @@
 /* Begin PBXFileReference section */
 		753052B51A60BF30003A2746 /* MKDataScannerDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerDataProvider.h; sourceTree = "<group>"; };
 		753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerDataProvider.m; sourceTree = "<group>"; };
+		753220051A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerDispatchIOFileProvider.h; sourceTree = "<group>"; };
+		753220061A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerDispatchIOFileProvider.m; sourceTree = "<group>"; };
 		755931701A6093DF000C5F8A /* libMKDataScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKDataScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		755931731A6093DF000C5F8A /* MKDataScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKDataScanner.h; sourceTree = "<group>"; };
-		755931751A6093DF000C5F8A /* MKDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDataScanner.m; sourceTree = "<group>"; };
+		755931731A6093DF000C5F8A /* MKDataScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MKDataScanner.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		755931751A6093DF000C5F8A /* MKDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MKDataScanner.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDataScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		755931811A6093DF000C5F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7559318A1A6094E7000C5F8A /* MKDataScannerFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerFileProvider.h; sourceTree = "<group>"; };
-		7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerFileProvider.m; sourceTree = "<group>"; };
+		7559318A1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerStreamFileProvider.h; sourceTree = "<group>"; };
+		7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerStreamFileProvider.m; sourceTree = "<group>"; };
 		7559318D1A60963A000C5F8A /* MKDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataProvider.h; sourceTree = "<group>"; };
 		7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFileScannerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,8 +98,10 @@
 				755931731A6093DF000C5F8A /* MKDataScanner.h */,
 				755931751A6093DF000C5F8A /* MKDataScanner.m */,
 				7559318D1A60963A000C5F8A /* MKDataProvider.h */,
-				7559318A1A6094E7000C5F8A /* MKDataScannerFileProvider.h */,
-				7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */,
+				7559318A1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.h */,
+				7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */,
+				753220051A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.h */,
+				753220061A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m */,
 				753052B51A60BF30003A2746 /* MKDataScannerDataProvider.h */,
 				753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */,
 			);
@@ -209,7 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */,
-				7559318C1A6094E7000C5F8A /* MKDataScannerFileProvider.m in Sources */,
+				7559318C1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m in Sources */,
+				753220071A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m in Sources */,
 				753052B71A60BF30003A2746 /* MKDataScannerDataProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
