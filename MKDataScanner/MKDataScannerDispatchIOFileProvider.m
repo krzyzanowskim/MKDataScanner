@@ -46,13 +46,13 @@
     __block NSMutableData *totalData = [NSMutableData data];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_io_read(self.dispatchIO, range.location, range.length, self.queue, ^(bool done, dispatch_data_t data, int error) {
+        self.localOffset = self.localOffset + dispatch_data_get_size(data);
+        if (data) {
+            [totalData appendData:(NSData *)data];
+        }
+        
         if (done) {
-            [totalData appendData:(NSData *)data];
-            self.localOffset = self.localOffset + dispatch_data_get_size(data);
             dispatch_semaphore_signal(semaphore);
-        } else if (data != nil) {
-            self.localOffset = self.localOffset + dispatch_data_get_size(data);
-            [totalData appendData:(NSData *)data];
         }
     });
     
