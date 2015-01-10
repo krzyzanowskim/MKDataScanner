@@ -1,5 +1,5 @@
 //
-//  MKDataScanner.h
+//  MKDataScannerFileProvider.h
 //  MKDataScanner
 //
 //  Created by Marcin Krzyzanowski on 09/01/15.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MKDataProvider.h"
 
-@interface MKDataScanner : NSObject
-@property NSUInteger scanLocation;
-@property (getter=isAtEnd, readonly) BOOL atEnd;
-
+@interface MKDataScannerFileProvider : NSObject <MKDataProvider>
 - (instancetype) initWithFileURL:(NSURL *)fileURL;
-- (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 
 @end

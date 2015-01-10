@@ -10,6 +10,8 @@
 		755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; };
 		755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 755931751A6093DF000C5F8A /* MKDataScanner.m */; };
 		7559317C1A6093DF000C5F8A /* libMKDataScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 755931701A6093DF000C5F8A /* libMKDataScanner.a */; };
+		7559318C1A6094E7000C5F8A /* MKDataScannerFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */; };
+		7559318F1A609D1D000C5F8A /* MKFileScannerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,10 @@
 		755931751A6093DF000C5F8A /* MKDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKDataScanner.m; sourceTree = "<group>"; };
 		7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDataScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		755931811A6093DF000C5F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7559318A1A6094E7000C5F8A /* MKDataScannerFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerFileProvider.h; sourceTree = "<group>"; };
+		7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerFileProvider.m; sourceTree = "<group>"; };
+		7559318D1A60963A000C5F8A /* MKDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataProvider.h; sourceTree = "<group>"; };
+		7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFileScannerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 			children = (
 				755931731A6093DF000C5F8A /* MKDataScanner.h */,
 				755931751A6093DF000C5F8A /* MKDataScanner.m */,
+				7559318D1A60963A000C5F8A /* MKDataProvider.h */,
+				7559318A1A6094E7000C5F8A /* MKDataScannerFileProvider.h */,
+				7559318B1A6094E7000C5F8A /* MKDataScannerFileProvider.m */,
 			);
 			path = MKDataScanner;
 			sourceTree = "<group>";
@@ -93,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				755931801A6093DF000C5F8A /* Supporting Files */,
+				7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */,
 			);
 			path = MKDataScannerTests;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */,
+				7559318C1A6094E7000C5F8A /* MKDataScannerFileProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7559318F1A609D1D000C5F8A /* MKFileScannerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
