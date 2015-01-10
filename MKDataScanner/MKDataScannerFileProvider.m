@@ -77,7 +77,9 @@
 
     BOOL ret = [self.inputStream setProperty:@(offset) forKey:NSStreamFileCurrentOffsetKey];
     NSAssert(ret, @"Can't set offset");
-    self.endReached = NO;
+    if (ret) {
+        self.endReached = NO;
+    }
 }
 
 - (BOOL)isAtEnd
