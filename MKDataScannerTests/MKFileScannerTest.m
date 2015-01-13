@@ -43,10 +43,9 @@
 - (void) testScanUpToBytes
 {
     MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];
-    //    UInt8 searchBytes[] = {0x03, 0x04, 0x05, 0x06};
-    UInt8 searchBytes[] = {0x00};
+    UInt8 searchBytes[] = {0x01};
     XCTAssertTrue([dataScanner scanUpToBytes:&searchBytes length:sizeof(searchBytes) intoData:nil]);
-    XCTAssertEqual(dataScanner.scanLocation, 0);
+    XCTAssertEqual(dataScanner.scanLocation, 1);
 }
 
 - (void) testScanUpToBytes2
@@ -160,6 +159,16 @@
     XCTAssertTrue([dataScanner scanBytes:scannedBytes length:6]);
     XCTAssertFalse([dataScanner scanBytes:scannedBytes length:9]);
     XCTAssertEqual(scannedBytes[0], 0x03);
+}
+
+- (void) testscanUpToBytesFromSet
+{
+    MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithFileURL:[NSURL fileURLWithPath:[self tmpFilePath]]];
+    NSData *scanned;
+    [dataScanner scanUpToBytesFromSet:[NSSet setWithArray:@[@(0x02),@(0x02),@(0x03),@(0x04)]] intoData:&scanned];
+    XCTAssertEqual(dataScanner.scanLocation, 2);
+    [dataScanner scanUpToBytesFromSet:[NSSet setWithArray:@[@(0x08),@(0x07)]] intoData:&scanned];
+    XCTAssertEqual(dataScanner.scanLocation, 7);
 }
 
 

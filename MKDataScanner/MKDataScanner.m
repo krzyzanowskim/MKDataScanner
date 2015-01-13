@@ -77,6 +77,43 @@
     return [self.provider isAtEnd];
 }
 
+
+/**
+ *  Scans the data until a byte from a given set is encountered, accumulating bytes into a data that’s returned by reference.
+ *
+ *  @param stopSet   The set of bytes up to which to scan.
+ *  @param dataValue Upon return, contains the bytes scanned.
+ *
+ *  @return YES if the receiver scanned any bytes, otherwise NO.
+ */
+- (BOOL) scanUpToBytesFromSet:(NSSet *)stopSet intoData:(NSData * __autoreleasing *)dataValue
+{
+    NSParameterAssert(stopSet);
+    NSMutableData *scannedData = [NSMutableData data];
+    
+    NSUInteger location = self.scanLocation;
+    NSData *currentBlock = nil;
+    while ((currentBlock = [self.provider dataForRange:(NSRange){location,sizeof(Byte)}])) {
+        for (NSNumber *stopByteNumber in stopSet) {
+            NSAssert(stopByteNumber.unsignedIntValue <= 255, @"Invalid set");
+            Byte stopByte = stopByteNumber.unsignedShortValue;
+            Byte blockByte = 0;
+            [currentBlock getBytes:&blockByte length:sizeof(Byte)];
+            if (blockByte == stopByte) {
+                [scannedData appendData:currentBlock];
+                if (dataValue) {
+                    *dataValue = [scannedData copy];
+                }
+                self.scanLocation = location;
+                return YES;
+            }
+        }
+        location += currentBlock.length;
+        [scannedData appendData:currentBlock];
+    }
+    return NO;
+}
+
 - (BOOL)scanUpToBytes:(const void *)bytes length:(int)length intoData:(NSData * __autoreleasing *)dataValue
 {
     NSData *data = [NSData dataWithBytes:bytes length:length];
@@ -95,7 +132,7 @@
         if (searchRange.location != NSNotFound) {
             if (dataValue) {
                 [scannedData appendData:[currentBlock subdataWithRange:(NSRange){0,searchRange.location}]];
-                *dataValue = scannedData;
+                *dataValue = [scannedData copy];
             }
             self.scanLocation = location + searchRange.location;
             return YES;
@@ -103,8 +140,6 @@
         location += currentBlock.length;
         [scannedData appendData:currentBlock];
     }
-
-    
     return NO;
 }
 

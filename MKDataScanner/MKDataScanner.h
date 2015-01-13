@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, MKDataFileHandlerType) {
 + (instancetype) scannerWithData:(NSData *)data;
 
 - (BOOL)scanUpToBytes:(const void *)bytes length:(int)length intoData:(NSData * __autoreleasing *)dataValue;
+- (BOOL)scanUpToBytesFromSet:(NSSet *)stopSet intoData:(NSData * __autoreleasing *)dataValue;
 - (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 - (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue;
 - (BOOL)scanInteger:(NSInteger *)value;
