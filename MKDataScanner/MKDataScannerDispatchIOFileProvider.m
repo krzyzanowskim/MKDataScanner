@@ -46,7 +46,6 @@
     __block NSMutableData *totalData = [NSMutableData data];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_io_read(self.dispatchIO, range.location, range.length, self.queue, ^(bool done, dispatch_data_t data, int error) {
-        self.localOffset = self.localOffset + dispatch_data_get_size(data);
         if (data) {
             [totalData appendData:(NSData *)data];
         }
@@ -57,7 +56,7 @@
     });
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    return totalData;
+    return totalData.length > 0 ? [totalData copy] : nil;
 }
 
 - (NSInteger)offset
@@ -77,6 +76,11 @@
         return YES;
     }
     return NO;
+}
+
+- (NSUInteger)size
+{
+    return self.fileSize;
 }
 
 @end

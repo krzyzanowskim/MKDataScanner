@@ -28,4 +28,6 @@ typedef NS_ENUM(NSInteger, MKDataFileHandlerType) {
 - (BOOL)scanUpToData:(NSData *)stopData intoData:(NSData **)dataValue;
 - (BOOL)scanData:(NSData *)data intoData:(NSData **)dataValue;
 - (BOOL)scanInteger:(NSInteger *)value;
+- (BOOL)scanByte:(Byte *)value;
+- (BOOL)scanBytes:(Byte *)buffer length:(int)length;
 @end

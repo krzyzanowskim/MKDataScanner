@@ -35,4 +35,9 @@
     return (self.offset < self.data.length);
 }
 
+- (NSUInteger)size
+{
+    return self.data.length;
+}
+
 @end

@@ -14,4 +14,5 @@
 - (void) setOffset:(NSInteger)offset;
 - (NSData *) dataForRange:(NSRange)range;
 - (BOOL) isAtEnd;
+- (NSUInteger) size;
 @end

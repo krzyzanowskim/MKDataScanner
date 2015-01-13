@@ -40,8 +40,12 @@
 
 #pragma mark - MKDataProvider
 
+// random access to stream data is unefficient because stream is reset after every access
 - (NSData *)dataForRange:(NSRange)range
 {
+    NSUInteger initialOffset = self.offset;
+    [self setOffset:range.location];
+    
     uint8_t buffer[range.length];
     NSInteger result = [self.inputStream read:buffer maxLength:range.length];
     if (result < 0) {
@@ -50,6 +54,7 @@
         self.endReached = YES;
     } else if (result > 0) {
         NSData *readData = [NSData dataWithBytes:buffer length:result];
+        [self setOffset:initialOffset];
         return readData;
     }
     
@@ -85,6 +90,13 @@
 - (BOOL)isAtEnd
 {
     return self.endReached;
+}
+
+- (NSUInteger)size
+{
+    NSNumber* theSize = nil;
+    [self.fileURL getResourceValue:&theSize forKey:NSURLFileSizeKey error:nil];
+    return [theSize unsignedIntegerValue];
 }
 
 @end
