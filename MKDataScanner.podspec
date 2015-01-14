@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MKDataScanner"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "NSScanner for NSData and files."
   s.description  = "MKDataScanner is for raw data, what NSScanner is for NSString."
   s.homepage     = "https://github.com/krzyzanowskim/MKDataScanner"
