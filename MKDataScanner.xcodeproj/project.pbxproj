@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A127D231ADEBD0E004EFE3A /* libMKDataScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A127D181ADEBD0E004EFE3A /* libMKDataScanner.a */; };
+		4A127D2F1ADEBE22004EFE3A /* MKDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 755931751A6093DF000C5F8A /* MKDataScanner.m */; };
+		4A127D301ADEBE27004EFE3A /* MKDataScannerStreamFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */; };
+		4A127D311ADEBE2A004EFE3A /* MKDataScannerDispatchIOFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753220061A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m */; };
+		4A127D321ADEBE2D004EFE3A /* MKDataScannerDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */; };
+		4A127D331ADEBFD7004EFE3A /* MKFileScannerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318E1A609D1D000C5F8A /* MKFileScannerTest.m */; };
+		4A127D341ADEC05C004EFE3A /* MKDataScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A127D361ADEC1E8004EFE3A /* MKDataScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		753052B71A60BF30003A2746 /* MKDataScannerDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */; };
 		753220071A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 753220061A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.m */; };
-		755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 755931731A6093DF000C5F8A /* MKDataScanner.h */; };
 		755931761A6093DF000C5F8A /* MKDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 755931751A6093DF000C5F8A /* MKDataScanner.m */; };
 		7559317C1A6093DF000C5F8A /* libMKDataScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 755931701A6093DF000C5F8A /* libMKDataScanner.a */; };
 		7559318C1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4A127D241ADEBD0E004EFE3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 755931681A6093DF000C5F8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A127D171ADEBD0E004EFE3A;
+			remoteInfo = "MKDataScanner-Mac";
+		};
 		7559317D1A6093DF000C5F8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 755931681A6093DF000C5F8A /* Project object */;
@@ -26,20 +40,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		7559316E1A6093DF000C5F8A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				755931741A6093DF000C5F8A /* MKDataScanner.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		4A127D181ADEBD0E004EFE3A /* libMKDataScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKDataScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A127D221ADEBD0E004EFE3A /* MKDataScanner-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MKDataScanner-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		753052B51A60BF30003A2746 /* MKDataScannerDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerDataProvider.h; sourceTree = "<group>"; };
 		753052B61A60BF30003A2746 /* MKDataScannerDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerDataProvider.m; sourceTree = "<group>"; };
 		753220051A60DC930065E39D /* MKDataScannerDispatchIOFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerDispatchIOFileProvider.h; sourceTree = "<group>"; };
@@ -47,7 +50,7 @@
 		755931701A6093DF000C5F8A /* libMKDataScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKDataScanner.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		755931731A6093DF000C5F8A /* MKDataScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MKDataScanner.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		755931751A6093DF000C5F8A /* MKDataScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MKDataScanner.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKDataScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7559317B1A6093DF000C5F8A /* MKDataScanner-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MKDataScanner-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		755931811A6093DF000C5F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7559318A1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDataScannerStreamFileProvider.h; sourceTree = "<group>"; };
 		7559318B1A6094E7000C5F8A /* MKDataScannerStreamFileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDataScannerStreamFileProvider.m; sourceTree = "<group>"; };
@@ -56,6 +59,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A127D151ADEBD0E004EFE3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A127D1F1ADEBD0E004EFE3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A127D231ADEBD0E004EFE3A /* libMKDataScanner.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7559316D1A6093DF000C5F8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				755931701A6093DF000C5F8A /* libMKDataScanner.a */,
-				7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */,
+				7559317B1A6093DF000C5F8A /* MKDataScanner-iOSTests.xctest */,
+				4A127D181ADEBD0E004EFE3A /* libMKDataScanner.a */,
+				4A127D221ADEBD0E004EFE3A /* MKDataScanner-MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,27 +147,81 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4A127D161ADEBD0E004EFE3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A127D341ADEC05C004EFE3A /* MKDataScanner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A127D351ADEC1DC004EFE3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A127D361ADEC1E8004EFE3A /* MKDataScanner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		7559316F1A6093DF000C5F8A /* MKDataScanner */ = {
+		4A127D171ADEBD0E004EFE3A /* MKDataScanner-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner" */;
+			buildConfigurationList = 4A127D2D1ADEBD0E004EFE3A /* Build configuration list for PBXNativeTarget "MKDataScanner-Mac" */;
 			buildPhases = (
-				7559316C1A6093DF000C5F8A /* Sources */,
-				7559316D1A6093DF000C5F8A /* Frameworks */,
-				7559316E1A6093DF000C5F8A /* CopyFiles */,
+				4A127D141ADEBD0E004EFE3A /* Sources */,
+				4A127D151ADEBD0E004EFE3A /* Frameworks */,
+				4A127D161ADEBD0E004EFE3A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MKDataScanner;
+			name = "MKDataScanner-Mac";
+			productName = "MKDataScanner-Mac";
+			productReference = 4A127D181ADEBD0E004EFE3A /* libMKDataScanner.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4A127D211ADEBD0E004EFE3A /* MKDataScanner-MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A127D2E1ADEBD0E004EFE3A /* Build configuration list for PBXNativeTarget "MKDataScanner-MacTests" */;
+			buildPhases = (
+				4A127D1E1ADEBD0E004EFE3A /* Sources */,
+				4A127D1F1ADEBD0E004EFE3A /* Frameworks */,
+				4A127D201ADEBD0E004EFE3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A127D251ADEBD0E004EFE3A /* PBXTargetDependency */,
+			);
+			name = "MKDataScanner-MacTests";
+			productName = "MKDataScanner-MacTests";
+			productReference = 4A127D221ADEBD0E004EFE3A /* MKDataScanner-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7559316F1A6093DF000C5F8A /* MKDataScanner-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner-iOS" */;
+			buildPhases = (
+				7559316C1A6093DF000C5F8A /* Sources */,
+				7559316D1A6093DF000C5F8A /* Frameworks */,
+				4A127D351ADEC1DC004EFE3A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MKDataScanner-iOS";
 			productName = MKDataScanner;
 			productReference = 755931701A6093DF000C5F8A /* libMKDataScanner.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		7559317A1A6093DF000C5F8A /* MKDataScannerTests */ = {
+		7559317A1A6093DF000C5F8A /* MKDataScanner-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScannerTests" */;
+			buildConfigurationList = 755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner-iOSTests" */;
 			buildPhases = (
 				755931771A6093DF000C5F8A /* Sources */,
 				755931781A6093DF000C5F8A /* Frameworks */,
@@ -158,9 +232,9 @@
 			dependencies = (
 				7559317E1A6093DF000C5F8A /* PBXTargetDependency */,
 			);
-			name = MKDataScannerTests;
+			name = "MKDataScanner-iOSTests";
 			productName = MKDataScannerTests;
-			productReference = 7559317B1A6093DF000C5F8A /* MKDataScannerTests.xctest */;
+			productReference = 7559317B1A6093DF000C5F8A /* MKDataScanner-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -172,6 +246,12 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Marcin Krzyżanowski";
 				TargetAttributes = {
+					4A127D171ADEBD0E004EFE3A = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					4A127D211ADEBD0E004EFE3A = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					7559316F1A6093DF000C5F8A = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -192,13 +272,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7559316F1A6093DF000C5F8A /* MKDataScanner */,
-				7559317A1A6093DF000C5F8A /* MKDataScannerTests */,
+				7559316F1A6093DF000C5F8A /* MKDataScanner-iOS */,
+				7559317A1A6093DF000C5F8A /* MKDataScanner-iOSTests */,
+				4A127D171ADEBD0E004EFE3A /* MKDataScanner-Mac */,
+				4A127D211ADEBD0E004EFE3A /* MKDataScanner-MacTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A127D201ADEBD0E004EFE3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		755931791A6093DF000C5F8A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +298,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A127D141ADEBD0E004EFE3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A127D2F1ADEBE22004EFE3A /* MKDataScanner.m in Sources */,
+				4A127D301ADEBE27004EFE3A /* MKDataScannerStreamFileProvider.m in Sources */,
+				4A127D311ADEBE2A004EFE3A /* MKDataScannerDispatchIOFileProvider.m in Sources */,
+				4A127D321ADEBE2D004EFE3A /* MKDataScannerDataProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A127D1E1ADEBD0E004EFE3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A127D331ADEBFD7004EFE3A /* MKFileScannerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7559316C1A6093DF000C5F8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,14 +339,95 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4A127D251ADEBD0E004EFE3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A127D171ADEBD0E004EFE3A /* MKDataScanner-Mac */;
+			targetProxy = 4A127D241ADEBD0E004EFE3A /* PBXContainerItemProxy */;
+		};
 		7559317E1A6093DF000C5F8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7559316F1A6093DF000C5F8A /* MKDataScanner */;
+			target = 7559316F1A6093DF000C5F8A /* MKDataScanner-iOS */;
 			targetProxy = 7559317D1A6093DF000C5F8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4A127D291ADEBD0E004EFE3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = MKDataScanner;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4A127D2A1ADEBD0E004EFE3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = MKDataScanner;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4A127D2B1ADEBD0E004EFE3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4A127D2C1ADEBD0E004EFE3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		755931821A6093DF000C5F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -273,9 +462,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -307,8 +496,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -317,7 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = MKDataScanner;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -326,7 +518,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/Private";
+				PRODUCT_NAME = MKDataScanner;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -345,6 +540,7 @@
 				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -358,12 +554,29 @@
 				INFOPLIST_FILE = MKDataScannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A127D2D1ADEBD0E004EFE3A /* Build configuration list for PBXNativeTarget "MKDataScanner-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A127D291ADEBD0E004EFE3A /* Debug */,
+				4A127D2A1ADEBD0E004EFE3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A127D2E1ADEBD0E004EFE3A /* Build configuration list for PBXNativeTarget "MKDataScanner-MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A127D2B1ADEBD0E004EFE3A /* Debug */,
+				4A127D2C1ADEBD0E004EFE3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7559316B1A6093DF000C5F8A /* Build configuration list for PBXProject "MKDataScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -373,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner" */ = {
+		755931841A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				755931851A6093DF000C5F8A /* Debug */,
@@ -382,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScannerTests" */ = {
+		755931871A6093DF000C5F8A /* Build configuration list for PBXNativeTarget "MKDataScanner-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				755931881A6093DF000C5F8A /* Debug */,

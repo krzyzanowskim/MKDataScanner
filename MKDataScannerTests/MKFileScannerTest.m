@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Marcin Krzyżanowski. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "MKDataScanner.h"
 
