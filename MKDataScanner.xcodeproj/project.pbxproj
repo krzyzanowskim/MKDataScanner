@@ -243,7 +243,7 @@
 		755931681A6093DF000C5F8A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Marcin Krzyżanowski";
 				TargetAttributes = {
 					4A127D171ADEBD0E004EFE3A = {
@@ -355,6 +355,7 @@
 		4A127D291ADEBD0E004EFE3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				EXECUTABLE_PREFIX = lib;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -373,6 +374,7 @@
 		4A127D2A1ADEBD0E004EFE3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
@@ -564,6 +566,7 @@
 				4A127D2A1ADEBD0E004EFE3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A127D2E1ADEBD0E004EFE3A /* Build configuration list for PBXNativeTarget "MKDataScanner-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +575,7 @@
 				4A127D2C1ADEBD0E004EFE3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7559316B1A6093DF000C5F8A /* Build configuration list for PBXProject "MKDataScanner" */ = {
 			isa = XCConfigurationList;
