@@ -31,4 +31,6 @@ typedef NS_ENUM(NSInteger, MKDataFileHandlerType) {
 - (BOOL)scanInteger:(NSInteger *)value;
 - (BOOL)scanByte:(Byte *)value;
 - (BOOL)scanBytes:(Byte *)buffer length:(int)length;
+- (BOOL)scanHexFloat:(Float32 *)value;
+
 @end

@@ -214,6 +214,27 @@
     return YES;
 }
 
+- (BOOL)scanHexFloat:(Float32 *)value
+{
+    NSData *scannedBlock = nil;
+    if (![self.provider isAtEnd] && (scannedBlock = [self.provider dataForRange:(NSRange){self.scanLocation,sizeof(Float32)}])) {
+        if (scannedBlock.length != sizeof(Float32)) {
+            if (value) {
+                *value = scannedBlock.length > sizeof(Float32) ? INT_MAX : INT_MIN;
+            }
+            return NO;
+        }
+        Float32 scannedValue = 0.0f;
+        [scannedBlock getBytes:&scannedValue length:scannedBlock.length];
+        if (value) {
+            *value = scannedValue;
+        }
+        self.scanLocation = self.scanLocation + scannedBlock.length;
+        return YES;
+    }
+    return NO;
+}
+
 + (instancetype) scannerWithFileURL:(NSURL *)fileURL
 {
     return [[MKDataScanner alloc] initWithFileURL:fileURL];
