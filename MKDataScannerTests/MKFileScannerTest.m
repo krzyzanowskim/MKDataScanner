@@ -170,5 +170,27 @@
     XCTAssertEqual(dataScanner.scanLocation, 7);
 }
 
+- (void) testScanFloat32FromDataSet
+{
+    // write a well known float32 to NSData
+    Float32 wellKnownValue = 12345678.0f;
+    Float32 wellKnownValue2 = 98765432.0;
+    NSUInteger float32Size = sizeof(Float32);
+    
+    NSMutableData * prefabFloatData = [NSMutableData dataWithCapacity:0];
+    [prefabFloatData appendBytes:&wellKnownValue length:float32Size];
+    [prefabFloatData appendBytes:&wellKnownValue2 length:float32Size];
+    
+    // initialise the scanner with the Data
+    MKDataScanner *dataScanner = [[MKDataScanner alloc] initWithData:prefabFloatData];
+
+    Float32 checkWellKnownFloatValue = 0.0f, checkWellKnownFloatValue2 = 0.0f;
+    // retrieve the first one
+    [dataScanner scanHexFloat:&checkWellKnownFloatValue];
+    XCTAssertEqual(checkWellKnownFloatValue, wellKnownValue);
+    // retrieve the first one
+    [dataScanner scanHexFloat:&checkWellKnownFloatValue2];
+    XCTAssertEqual(checkWellKnownFloatValue2, wellKnownValue2);
+}
 
 @end
